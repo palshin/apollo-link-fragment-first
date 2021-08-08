@@ -87,6 +87,63 @@ apolloClient.query({
 
 Если кеш Apollo уже содержит данные для фрагмента в ```fragmentFirst```, линк прервет запрос и запишет данные фрагмента в кеш, в результат запроса ```POST_ONE```.
 
+<details>
+  <summary>Еще пример</summary>
+
+```js
+const POST_FRAGMENT = gql`
+  fragment post on Post {
+    id
+    name
+  }
+`;
+
+const POSTS_ALL = gql`
+  query POSTS_ALL {
+    posts {
+      ...post
+      content
+      createdAt
+      publishedAt
+      author {
+        id
+        name
+      }
+    }
+  }
+  ${POST_FRAGMENT}
+`;
+
+const POST_ONE = gql`
+  query POST_ONE($id: ID!) {
+    post(id: $id) {
+      ...post
+    }
+  }
+  ${POST_FRAGMENT}
+`;
+
+// сделает 1 запрос на сервер
+const { data: data1 } = await apolloClient.query({
+  query: POSTS_ALL,
+});
+
+// не будет делать запрос на сервер, запишет фрагмент в результат запроса
+const { data: data2 } = await apolloClient.query({
+  query: POST_ONE,
+  variables: {
+    id: 1,
+  },
+  context: {
+    fragmentFirst: {
+      id: 'Post:1',
+      fragment: POST_FRAGMENT,
+    }
+  }
+});
+```
+</details>
+
 
 ## Vue Apollo
 
