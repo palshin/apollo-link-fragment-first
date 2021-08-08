@@ -1,6 +1,6 @@
 # apollo-link-fragment-first
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/palshin/apollo-link-fragment-first/blob/master/README.md)
-[![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/palshin/apollo-link-fragment-first/blob/master/README.ru.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/palshin/apollo-link-fragment-first/blob/main/README.md)
+[![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/palshin/apollo-link-fragment-first/blob/main/README.ru.md)
 
 Apollo Link для извлечения результата запроса из фрагмента.
 
