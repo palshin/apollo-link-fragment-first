@@ -54,7 +54,7 @@ const apolloClient = new ApolloClient({
 });
 ```
 
-Now in the request for ```Apollo``` in the ```context``` option, you can pass a fragment that corresponds to the result of the request:
+Now in the request for Apollo in the ```context``` option, you can pass a fragment that corresponds to the result of the request:
 
 ```js
 const POST_FRAGMENT = gql`
