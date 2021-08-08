@@ -94,6 +94,7 @@ Everything is exactly the same as in the case of using it directly through the `
 
 ```js
 export default {
+  name: 'PostCard',
   apollo: {
     post: {
       query: gql`
@@ -112,11 +113,17 @@ export default {
       context() {
         return {
           fragmentFirst: {
-            id: `Post:1`,
+            id: `Post:${this.id}`,
             fragment: POST_FRAGMENT,
           },
         };
       },
+    },
+  },
+  props: {
+    id: {
+      required: true,
+      type: String,
     },
   },
 };
