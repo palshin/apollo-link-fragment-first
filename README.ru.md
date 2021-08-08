@@ -112,7 +112,7 @@ export default {
       context() {
         return {
           fragmentFirst: {
-            id: `Post:1`,
+            id: `Post:${this.id}`,
             fragment: POST_FRAGMENT,
           },
         };
