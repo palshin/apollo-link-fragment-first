@@ -90,7 +90,7 @@ If the Apollo cache already contains data for the fragment in ```fragmentFirst``
 
 ## Vue Apollo
 
-Everything is exactly the same as in the case of using it directly through the ```ApolloClient``` instance. But since ```Vue Apollo``` turns ```context``` into a ```computed``` property, we can use the component data to calculate the fragment id:
+Everything is exactly the same as in the case of using it directly through the ```ApolloClient``` instance. But since ```Vue Apollo``` turns ```context``` into a ```computed``` property, we can use the component data to calculate the fragment's id:
 
 ```js
 export default {
