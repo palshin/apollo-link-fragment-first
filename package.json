@@ -1,0 +1,47 @@
+{
+  "name": "apollo-link-fragment-first",
+  "version": "1.0.0",
+  "description": "An Apollo Link to getting queries from fragments",
+  "peerDependencies": {
+    "@apollo/client": "^3.4.5"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.5.0",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-unicorn": "^35.0.0",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5"
+  },
+  "main": "build/dist/index.js",
+  "module": "build/dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "palshin/apollo-link-fragment-first"
+  },
+  "jsnext:main": "build/dist/index.js",
+  "typings": "build/dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint 'src/**/*.ts' --fix"
+  },
+  "keywords": [
+    "graphql",
+    "apollo",
+    "apollo-link",
+    "@apollo/client",
+    "fragment"
+  ],
+  "author": "Eugene Palshin <eo.palshin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/client": "^3.4.5",
+    "graphql": "^15.5.1"
+  }
+}
