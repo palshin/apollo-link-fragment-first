@@ -29,7 +29,7 @@ query POST_ONE($id: ID!) {
 }
 ```
 
-Information about the relationship between the results of the ``USERS_ALL_WITH_POSTS`` and ``POST_ONE``` queries cannot be obtained from the types (or, in other words, the logic of fetching data for ``POST_ONE`` is known only to the server, and Apollo can only assume whether there is data in the cache or not). Therefore, in this case, Apollo will make a request to the server, despite the fact that the data for the request has already been loaded into the cache. The package allows you to solve this problem by specifying the desired fragment in the context of the request.
+Information about the relationship between the results of the ```USERS_ALL_WITH_POSTS``` and ```POST_ONE``` queries cannot be obtained from the types (or, in other words, the logic of fetching data for ```POST_ONE``` is known only to the server, and Apollo can only assume whether there is data in the cache or not). Therefore, in this case, Apollo will make a request to the server, despite the fact that the data for the request has already been loaded into the cache. The package allows you to solve this problem by specifying the desired fragment in the context of the request.
 
 ## Как использовать
 
