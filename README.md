@@ -95,6 +95,12 @@ Everything is exactly the same as in the case of using it directly through the `
 ```js
 export default {
   name: 'PostCard',
+  props: {
+    id: {
+      required: true,
+      type: String,
+    },
+  },
   apollo: {
     post: {
       query: gql`
@@ -120,11 +126,5 @@ export default {
       },
     },
   },
-  props: {
-    id: {
-      required: true,
-      type: String,
-    },
-  },
-};
+}
 ```

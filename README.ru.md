@@ -95,6 +95,12 @@ apolloClient.query({
 ```js
 export default {
   name: 'PostCard',
+  props: {
+    id: {
+      required: true,
+      type: String,
+    },
+  },
   apollo: {
     post: {
       query: gql`
@@ -120,11 +126,5 @@ export default {
       },
     },
   },
-  props: {
-    id: {
-      required: true,
-      type: String,
-    },
-  },
-};
+}
 ```
