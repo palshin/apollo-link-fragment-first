@@ -78,14 +78,14 @@ apolloClient.query({
   },
   context: {
     fragmentFirst: {
-      id: `Post:1`,
+      id: 'Post:1',
       fragment: POST_FRAGMENT,
     }
   }
 })
 ```
 
-Если кеш ```Apollo``` уже содержит данные для фрагмента в ```fragmentFirst```, линк прервет запрос и запишет данные фрагмента в кеш, в результат запроса ```POST_ONE```.
+Если кеш Apollo уже содержит данные для фрагмента в ```fragmentFirst```, линк прервет запрос и запишет данные фрагмента в кеш, в результат запроса ```POST_ONE```.
 
 
 ## Vue Apollo
